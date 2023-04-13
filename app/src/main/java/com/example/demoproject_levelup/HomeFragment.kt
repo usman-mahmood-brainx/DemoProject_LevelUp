@@ -17,19 +17,15 @@ import androidx.fragment.app.Fragment
 
 
 class HomeFragment(private val context: Context) : Fragment() {
-    lateinit var tvWelcome: TextView
-
-
+ 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val name = "John"
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         // Inflate the layout for this fragment
 
-        dynamicName(view,name)
         val dashboardList = listOf<DashboardItem>(
             DashboardItem("Do Today",R.drawable.do_today),
             DashboardItem("Activities & Tips",R.drawable.activities_tips),
@@ -50,23 +46,19 @@ class HomeFragment(private val context: Context) : Fragment() {
         return view
     }
 
-    fun dynamicName(view: View, name: String){
-        val welcome = "Welcome $name"
-        val spannableString = SpannableString(welcome)
-        spannableString.setSpan(ForegroundColorSpan(Color.BLACK), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        spannableString.setSpan(ForegroundColorSpan(getColor(context,R.color.blue2)), 8,welcome.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        tvWelcome = view.findViewById<TextView>(R.id.welcome)
-        tvWelcome.text = spannableString
-    }
+
 
 
     fun inflateLayout(gridLayout: GridLayout, dashboardItem: DashboardItem): View {
+        // Inflating Card View Layout
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.dashboard_item,gridLayout, false)
+        // Setting textView and Image
         val textView = view.findViewById<TextView>(R.id.tvDashItem)
         textView.text = dashboardItem.name
         val imageView = view.findViewById<ImageView>(R.id.ivDashItem)
         imageView.setImageResource(dashboardItem.image)
+
         return view
     }
 
