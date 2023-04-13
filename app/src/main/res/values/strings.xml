@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">DemoProject_LevelUp</string>
     <string name="signup">Not yet a member? Sign up</string>
+    <string name="home">Home</string>
+    <string name="notification">Notification</string>
+    <string name="setting">Setting</string>
+    <string name="home_bottom_qoute">"You can make money or you can make excuses. Which do you prefer?"</string>
+    <string name="home_bottom_author">By Tom ferry</string>
 </resources>

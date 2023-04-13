@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home_unselected"
+        android:title="@string/home" />
+    
+
+    <item
+        android:id="@+id/menu_notification"
+        android:icon="@drawable/notification_unselected"
+        android:title="@string/notification" />
+   
+    <item
+        android:id="@+id/menu_setting"
+        android:icon="@drawable/settings_unselected"
+        android:title="@string/setting" />
+   
+</menu>
