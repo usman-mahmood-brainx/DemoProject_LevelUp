@@ -10,4 +10,8 @@
     <color name="grey">#D4DAE4</color>
     <color name="blue1">#2573D5</color>
     <color name="blue2">#1F69FF</color>
+    <color name="grey2">#5D687E</color>
+    <color name="grey_background">#EFF2F9</color>
+    <color name="blue3">#007AFF</color>
+    <color name="dark_grey">#060606</color>
 </resources>
