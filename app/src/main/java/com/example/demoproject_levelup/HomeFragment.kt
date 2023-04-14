@@ -54,10 +54,10 @@ class HomeFragment(private val context: Context) : Fragment() {
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.dashboard_item,gridLayout, false)
         // Setting textView and Image
-        val textView = view.findViewById<TextView>(R.id.tvDashItem)
-        textView.text = dashboardItem.name
-        val imageView = view.findViewById<ImageView>(R.id.ivDashItem)
-        imageView.setImageResource(dashboardItem.image)
+        val tvDashItem = view.findViewById<TextView>(R.id.tvDashItem)
+        tvDashItem.text = dashboardItem.name
+        val ivDashItem = view.findViewById<ImageView>(R.id.ivDashItem)
+        ivDashItem.setImageResource(dashboardItem.image)
 
         return view
     }

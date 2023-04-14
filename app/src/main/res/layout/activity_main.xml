@@ -22,14 +22,14 @@
         <View
             android:id="@+id/home_bar"
             android:layout_width="0dp"
-            android:layout_height="3dp"
+            android:layout_height="2.5dp"
             android:layout_weight="1"
             android:background="@color/blue2"
             />
         <View
             android:id="@+id/notification_bar"
             android:layout_width="0dp"
-            android:layout_height="3dp"
+            android:layout_height="2.5dp"
             android:layout_weight="1"
             android:background="@color/blue2"
             android:visibility="invisible"
@@ -37,7 +37,7 @@
         <View
             android:id="@+id/setting_bar"
             android:layout_width="0dp"
-            android:layout_height="3dp"
+            android:layout_height="2.5dp"
             android:layout_weight="1"
             android:background="@color/blue2"
             android:visibility="invisible"

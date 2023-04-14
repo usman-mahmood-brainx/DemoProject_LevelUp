@@ -22,6 +22,12 @@
         android:paddingBottom="23dp"
 
         >
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle_2"
+            android:layout_alignParentEnd="true"
+            />
 
         <RelativeLayout
             android:id="@+id/rl1"
@@ -46,7 +52,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_toRightOf="@+id/tvSenderName"
-                android:background="@drawable/circle" />
+                android:background="@drawable/circle_1" />
 
             <TextView
                 android:id="@+id/tvDesignation"
