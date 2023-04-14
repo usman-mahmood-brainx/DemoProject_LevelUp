@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                     findViewById<View>(R.id.home_bar).visibility = View.INVISIBLE
                     findViewById<View?>(R.id.notification_bar).visibility  =  View.INVISIBLE
                     findViewById<View?>(R.id.setting_bar).visibility = View.VISIBLE
-                    loadFragment(SettingFragment())
+                    loadFragment(SettingFragment(this))
                     true
                 }
                 else -> false
