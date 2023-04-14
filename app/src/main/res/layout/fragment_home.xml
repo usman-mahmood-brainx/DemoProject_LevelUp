@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:layout_weight="1.4">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,32 +23,41 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65">
 
             <ImageView
                 android:id="@+id/brainxLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/brainx_logo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:src="@drawable/brainx_logo" />
 
             <TextView
-                android:id="@+id/welcome"
+                android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Welcome John "
+                android:layout_below="@+id/brainxLogo"
+                android:layout_marginTop="10dp"
+                android:text="Welcome "
                 android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:textSize="22dp"
-                android:textStyle="bold"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brainxLogo"
+                android:layout_marginTop="10dp"
+                android:text="John "
+                android:textAllCaps="true"
+                android:textColor="@color/blue2"
+                android:layout_toRightOf="@+id/tvWelcome"
+                android:textSize="22dp"
+                android:textStyle="bold" />
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/brainxLogo" />
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
