@@ -21,7 +21,7 @@
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:textStyle="bold"
+            android:fontFamily="@font/geometosneuebold"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp" />
         

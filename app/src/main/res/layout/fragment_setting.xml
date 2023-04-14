@@ -20,7 +20,7 @@
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:textStyle="bold"
+            android:fontFamily="@font/geometosneuebold"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp" />
     </RelativeLayout>
@@ -51,6 +51,7 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/custom_button_2"
             android:text="Logout"
+            android:fontFamily="@font/ubuntu_medium"
             android:textAllCaps="false"
             android:textColor="@color/red"
             android:textSize="16dp"

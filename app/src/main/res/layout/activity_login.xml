@@ -27,7 +27,7 @@
         android:text="LOGIN"
         android:textColor="@color/black"
         android:textSize="24dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/geometosneuebold"
         app:layout_constraintBottom_toTopOf="@+id/etEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +44,7 @@
         android:background="@drawable/edit_text_box"
         android:padding="20dp"
         android:text="john321@gmail.com"
+        android:fontFamily="@font/sofia_pro_regular"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,10 +62,56 @@
         android:padding="20dp"
         android:text="john321@gmail.com"
         android:textSize="18dp"
+        android:fontFamily="@font/sofia_pro_medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--       style="@style/MyButtonStyle"-->
+
+    <TextView
+        android:id="@+id/tvforgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Frogot Password?"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textAlignment="textEnd"
+        android:textColor="@color/blue1"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.32999998"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Log In"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textAllCaps="false"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_button_1"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.13999999"
+        android:clickable="true"
+        android:cursorVisible="true"
+        />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -80,7 +127,7 @@
             android:layout_height="wrap_content"
             android:text="Not yet a member?"
 
-           />
+            />
         <TextView
             android:id="@+id/signupLink"
             android:layout_width="wrap_content"
@@ -93,53 +140,13 @@
             />
     </RelativeLayout>
 
-<!--       style="@style/MyButtonStyle"-->
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="Log In"
-        android:textAllCaps="false"
-        app:backgroundTint="@null"
-        android:background="@drawable/custom_button_1"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.13999999"
-        android:clickable="true"
-        android:cursorVisible="true"
-        />
-
-    <TextView
-        android:id="@+id/tvforgotPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Frogot Password?"
-        android:textAlignment="textEnd"
-        android:textColor="@color/blue1"
-        android:textSize="14dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.32999998"
-        tools:ignore="TextSizeCheck" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:text="POWERED BY"
+        android:fontFamily="@font/ubuntu_bold"
         android:textAlignment="center"
         android:textColor="@color/blue1"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
