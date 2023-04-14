@@ -38,13 +38,14 @@ class MainActivity : AppCompatActivity() {
                     findViewById<View>(R.id.home_bar).visibility = View.VISIBLE
                     findViewById<View?>(R.id.notification_bar).visibility  =  View.INVISIBLE
                     findViewById<View?>(R.id.setting_bar).visibility = View.INVISIBLE
-
+                    loadFragment(HomeFragment(this))
                     true
                 }
                 R.id.menu_notification -> {
                     findViewById<View>(R.id.home_bar).visibility = View.INVISIBLE
                     findViewById<View?>(R.id.notification_bar).visibility  =   View.VISIBLE
                     findViewById<View?>(R.id.setting_bar).visibility = View.INVISIBLE
+                    loadFragment(NotificationFragment(this))
                     true
                 }
                 R.id.menu_setting -> {

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white"
+    >
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="21dp"
+        android:paddingRight="21dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="23dp"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSenderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bryan Sheppard"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/vCircle"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/tvSenderName"
+                android:background="@drawable/circle" />
+
+            <TextView
+                android:id="@+id/tvDesignation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/vCircle"
+                android:text="Manager"
+                android:textColor="@color/grey3"
+                android:textSize="12dp"
+
+                tools:ignore="TextSizeCheck" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl1"
+            android:layout_marginTop="7dp"
+            android:text="Attn: Sales Meeting"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSubject"
+            android:layout_marginTop="7dp"
+            android:alpha="0.7"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="3"
+            android:text="Good Morning Coldwell Banker Agent \nYoutube "
+            android:textColor="@color/dark_grey"
+            android:textSize="14dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvTimePassed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMessage"
+            android:layout_marginTop="7dp"
+            android:text="12m ago"
+            android:textColor="@color/light_grey"
+            android:textSize="13dp"
+            tools:ignore="TextSizeCheck" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
