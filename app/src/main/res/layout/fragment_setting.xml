@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.8"
         android:paddingLeft="15dp">
         <TextView
             android:layout_width="wrap_content"
@@ -24,42 +24,58 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp" />
     </RelativeLayout>
-    <GridLayout
-        android:id="@+id/gridLayoutSetting"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6.7"
-        android:rowCount="6"
-        android:columnCount="1"
-        android:paddingTop="20dp"
-        android:background="@color/grey_background"
-        >
-
-    </GridLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2.3"
-        android:background="@color/grey_background" >
-
-        <Button
+        android:layout_weight="9.2"
+        android:background="@color/grey_background">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/custom_button_2"
-            android:text="Logout"
-            android:fontFamily="@font/ubuntu_medium"
-            android:textAllCaps="false"
-            android:textColor="@color/red"
-            android:textSize="16dp"
-            app:backgroundTint="@null"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.23000002" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+            <GridLayout
+                android:id="@+id/gridLayoutSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="6"
+                android:columnCount="1"
+                android:paddingTop="20dp"
+                android:background="@color/grey_background"
+                >
+
+            </GridLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_background"
+                android:paddingTop="20dp"
+                android:paddingBottom="30dp"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/custom_button_2"
+                    android:text="Logout"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="16dp"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.23000002" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
