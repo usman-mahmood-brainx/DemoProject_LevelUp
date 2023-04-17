@@ -1,16 +1,17 @@
 package com.example.demoproject_levelup
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.demoproject_levelup.databinding.ActivityLoginBinding
+import com.example.demoproject_levelup.Adapters.AdapterViewPager
+import com.example.demoproject_levelup.Fragments.HomeFragment
+import com.example.demoproject_levelup.Fragments.NotificationFragment
+import com.example.demoproject_levelup.Fragments.SettingFragment
 import com.example.demoproject_levelup.databinding.ActivityMainBinding
 import com.google.android.material.badge.BadgeDrawable
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

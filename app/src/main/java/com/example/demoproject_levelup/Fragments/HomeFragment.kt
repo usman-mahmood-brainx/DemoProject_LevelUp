@@ -1,19 +1,14 @@
-package com.example.demoproject_levelup
+package com.example.demoproject_levelup.Fragments
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.Fragment
+import com.example.demoproject_levelup.Models.DashboardItem
+import com.example.demoproject_levelup.R
 import com.example.demoproject_levelup.databinding.DashboardItemBinding
 import com.example.demoproject_levelup.databinding.FragmentHomeBinding
 
@@ -30,12 +25,12 @@ class HomeFragment(private val context: Context) : Fragment() {
         // Inflate the layout for this fragment
 
         val dashboardList = listOf<DashboardItem>(
-            DashboardItem("Do Today",R.drawable.do_today),
-            DashboardItem("Activities & Tips",R.drawable.activities_tips),
-            DashboardItem("Track It",R.drawable.track_it),
-            DashboardItem("Events",R.drawable.event),
-            DashboardItem("Training",R.drawable.training),
-            DashboardItem("Say & Share",R.drawable.say_share)
+            DashboardItem("Do Today", R.drawable.do_today),
+            DashboardItem("Activities & Tips", R.drawable.activities_tips),
+            DashboardItem("Track It", R.drawable.track_it),
+            DashboardItem("Events", R.drawable.event),
+            DashboardItem("Training", R.drawable.training),
+            DashboardItem("Say & Share", R.drawable.say_share)
         )
 
 

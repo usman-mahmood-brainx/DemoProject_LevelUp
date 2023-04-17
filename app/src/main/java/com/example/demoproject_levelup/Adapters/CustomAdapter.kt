@@ -1,11 +1,12 @@
-package com.example.demoproject_levelup
+package com.example.demoproject_levelup.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.demoproject_levelup.Models.Notification
+import com.example.demoproject_levelup.R
 
 class CustomAdapter(private val notificationList: List<Notification>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 

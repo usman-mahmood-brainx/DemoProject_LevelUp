@@ -1,4 +1,4 @@
-package com.example.demoproject_levelup
+package com.example.demoproject_levelup.Adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

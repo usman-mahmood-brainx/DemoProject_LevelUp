@@ -1,4 +1,4 @@
-package com.example.demoproject_levelup
+package com.example.demoproject_levelup.Fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -7,9 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
-import android.widget.ImageView
-import android.widget.TextView
-import com.example.demoproject_levelup.databinding.FragmentNotificationBinding
+import com.example.demoproject_levelup.Models.SettingItem
+import com.example.demoproject_levelup.R
 import com.example.demoproject_levelup.databinding.FragmentSettingBinding
 import com.example.demoproject_levelup.databinding.SettingCardItemBinding
 
