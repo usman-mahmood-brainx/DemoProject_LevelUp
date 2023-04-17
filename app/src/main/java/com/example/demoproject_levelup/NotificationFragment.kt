@@ -9,24 +9,26 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.demoproject_levelup.databinding.FragmentHomeBinding
+import com.example.demoproject_levelup.databinding.FragmentNotificationBinding
 
 class NotificationFragment(context: Context) : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
+    private lateinit var binding: FragmentNotificationBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_notification, container, false)
+        binding = FragmentNotificationBinding.inflate(inflater, container, false)
 
         val notificationList = getDummyNotificationList()
-        recyclerView = view.findViewById<RecyclerView>(R.id.rvNotification)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        val adapter = CustomAdapter(notificationList)
-        recyclerView.adapter = adapter
 
-        return view
+        binding.rvNotification.layoutManager = LinearLayoutManager(context)
+        val adapter = CustomAdapter(notificationList)
+        binding.rvNotification.adapter = adapter
+
+        return binding.root
     }
 
     fun getDummyNotificationList(): MutableList<Notification>{
