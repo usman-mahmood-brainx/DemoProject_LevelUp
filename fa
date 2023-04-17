@@ -1,0 +1,28 @@
+*   0d128e2 2023-04-17 | Merge pull request #6 from usman-mahmood-brainx/responsivenes_using_SV (HEAD -> master, origin/master) [Usman Mahmood]
+[31m|[m[32m\[m  
+[31m|[m * 7e5f3df 2023-04-17 | Used ScrollView on Home and Setting (origin/responsivenes_using_SV, responsivenes_using_SV) [Usman]
+[31m|[m[31m/[m  
+* e93244d 2023-04-15 | Login Screen Font Update [Usman]
+* a3f3524 2023-04-14 | Added Screenshots [Usman Mahmood]
+* 26b2fa8 2023-04-14 | Updated Fonts on all Screen [Usman]
+*   05e608e 2023-04-14 | Merge pull request #5 from usman-mahmood-brainx/Setting [Usman Mahmood]
+[33m|[m[34m\[m  
+[33m|[m * c408bdc 2023-04-14 | Finalized Setting Screen (origin/Setting, Setting) [Usman]
+[33m|[m * b4c2d40 2023-04-14 | Second commit SettingScreen [Usman]
+[33m|[m * 437d2f2 2023-04-14 | Initial Commit Setting [Usman]
+[33m|[m[33m/[m  
+*   7d53e53 2023-04-14 | Merge pull request #4 from usman-mahmood-brainx/NotificationScreen [Usman Mahmood]
+[35m|[m[36m\[m  
+[35m|[m * 7a579b4 2023-04-14 | Initial NotificationScreen (origin/NotificationScreen, NotificationScreen) [Usman]
+[35m|[m * 5781a15 2023-04-14 | Second Commit HomeScreen (HomeScreen) [Usman]
+* [36m|[m 10cb2d2 2023-04-14 | Merge pull request #3 from usman-mahmood-brainx/HomeScreen [Usman Mahmood]
+[1;31m|[m[36m\[m[36m|[m 
+[1;31m|[m * fc540e9 2023-04-13 | Initial Home Screen (origin/HomeScreen) [Usman]
+[1;31m|[m * 9b52539 2023-04-13 | Updated Manifest file [Usman]
+[1;31m|[m[1;31m/[m  
+*   8d8d65d 2023-04-13 | Merge pull request #1 from usman-mahmood-brainx/LoginScreen [Usman Mahmood]
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * b41bf62 2023-04-13 | Finalized Login Screen v2 (origin/LoginScreen, LoginScreen) [Usman]
+[1;33m|[m * 371cc15 2023-04-12 | Finalize Login Screen [Usman]
+[1;33m|[m[1;33m/[m  
+* b661f7a 2023-04-12 | Initial Commit [Usman]
