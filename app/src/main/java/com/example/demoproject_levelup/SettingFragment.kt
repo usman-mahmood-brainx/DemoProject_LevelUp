@@ -9,15 +9,19 @@ import android.view.ViewGroup
 import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.demoproject_levelup.databinding.FragmentNotificationBinding
+import com.example.demoproject_levelup.databinding.FragmentSettingBinding
+import com.example.demoproject_levelup.databinding.SettingCardItemBinding
 
 class SettingFragment(context:Context) : Fragment() {
-
+    private lateinit var binding: FragmentSettingBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_setting, container, false)
+        binding = FragmentSettingBinding.inflate(inflater, container, false)
+
 
         val settingList = listOf<SettingItem>(
             SettingItem(R.drawable.profile_icon, "Profile"),
@@ -28,27 +32,28 @@ class SettingFragment(context:Context) : Fragment() {
             SettingItem(R.drawable.faq_icon, "FAQ'S")
         )
 
-        val gridLayout = view.findViewById<GridLayout>(R.id.gridLayoutSetting)
 
         settingList.forEach{
-            val view = inflateLayout(gridLayout,it)
-            gridLayout.addView(view)
+            val view = inflateLayout(binding.gridLayoutSetting,it)
+            binding.gridLayoutSetting.addView(view)
         }
 
-        return view
+        return binding.root
     }
 
     fun inflateLayout(gridLayout: GridLayout, settingItem: SettingItem): View {
         // Inflating Card View Layout
         val inflater = LayoutInflater.from(context)
-        val view = inflater.inflate(R.layout.setting_card_item, gridLayout, false)
-        // Setting textView and Image
-        val ivIcon = view.findViewById<ImageView>(R.id.ivSettingIcon)
-        ivIcon.setImageResource(settingItem.icon)
-        val tvSettingTitle = view.findViewById<TextView>(R.id.tvSettingTitle)
-        tvSettingTitle.text = settingItem.title
 
-        return view
+        val settingItemBinding =  SettingCardItemBinding.inflate(inflater, gridLayout, false)
+
+        // Setting textView and Image
+
+        settingItemBinding.ivSettingIcon.setImageResource(settingItem.icon)
+
+        settingItemBinding.tvSettingTitle.text = settingItem.title
+
+        return settingItemBinding.root
     }
 
 }

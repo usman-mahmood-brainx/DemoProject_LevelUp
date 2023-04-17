@@ -14,16 +14,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.Fragment
+import com.example.demoproject_levelup.databinding.DashboardItemBinding
+import com.example.demoproject_levelup.databinding.FragmentHomeBinding
 
 
 class HomeFragment(private val context: Context) : Fragment() {
- 
+
+    private lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
 
         val dashboardList = listOf<DashboardItem>(
@@ -36,14 +39,14 @@ class HomeFragment(private val context: Context) : Fragment() {
         )
 
 
-        val gridLayout = view.findViewById<GridLayout>(R.id.gridDashboard)
+
 
         dashboardList.forEach{
-            val view = inflateLayout(gridLayout,it)
-            gridLayout.addView(view)
+            val view = inflateLayout(binding.gridDashboard,it)
+            binding.gridDashboard.addView(view)
         }
 
-        return view
+        return binding.root
     }
 
 
@@ -52,14 +55,15 @@ class HomeFragment(private val context: Context) : Fragment() {
     fun inflateLayout(gridLayout: GridLayout, dashboardItem: DashboardItem): View {
         // Inflating Card View Layout
         val inflater = LayoutInflater.from(context)
-        val view = inflater.inflate(R.layout.dashboard_item,gridLayout, false)
-        // Setting textView and Image
-        val tvDashItem = view.findViewById<TextView>(R.id.tvDashItem)
-        tvDashItem.text = dashboardItem.name
-        val ivDashItem = view.findViewById<ImageView>(R.id.ivDashItem)
-        ivDashItem.setImageResource(dashboardItem.image)
 
-        return view
+        val dashboardbinding = DashboardItemBinding.inflate(inflater, gridLayout, false)
+
+        // Setting textView and Image
+
+        dashboardbinding.tvDashItem.text = dashboardItem.name
+        dashboardbinding.ivDashItem.setImageResource(dashboardItem.image)
+
+        return dashboardbinding.root
     }
 
 

@@ -9,18 +9,20 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.widget.Button
 import android.widget.TextView
+import com.example.demoproject_levelup.databinding.ActivityLoginBinding
+import com.example.demoproject_levelup.databinding.ActivityMainBinding
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var btnLogin:Button
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        btnLogin = findViewById<Button>(R.id.btnLogin)
-        btnLogin.setOnClickListener {
-            val intent = Intent(this@LoginActivity,MainActivity::class.java)
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
             //finish()
             startActivity(intent)
         }

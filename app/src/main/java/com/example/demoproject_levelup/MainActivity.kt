@@ -7,17 +7,19 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.example.demoproject_levelup.databinding.ActivityLoginBinding
+import com.example.demoproject_levelup.databinding.ActivityMainBinding
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var binding: ActivityMainBinding
     private lateinit var notificationBadge: BadgeDrawable
-    private lateinit var pagerMain:ViewPager2
     private lateinit var fragmentList:MutableList<Fragment>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         
 
         // Setting up Bottom Navigation
@@ -27,15 +29,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun loadFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, fragment)
-        transaction.commit()
-    }
+//    private fun loadFragment(fragment: Fragment) {
+//        val transaction = supportFragmentManager.beginTransaction()
+//        transaction.replace(R.id.container, fragment)
+//        transaction.commit()
+//    }
 
     private fun navSetUp() {
 
-        pagerMain = findViewById<ViewPager2>(R.id.pagerMain)
 
         fragmentList = mutableListOf<Fragment>()
         fragmentList.add(HomeFragment(this))
@@ -44,19 +45,19 @@ class MainActivity : AppCompatActivity() {
 
         var adapterViewPager = AdapterViewPager(this,fragmentList)
         // set Adapter
-        pagerMain.adapter = adapterViewPager
-        pagerMain.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        binding.pagerMain.adapter = adapterViewPager
+        binding.pagerMain.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 // Called when a new page has been selected
                 when(position){
                     0 -> {
-                        bottomNavigationView.selectedItemId = R.id.menu_home
+                        binding.bottomNavigation.selectedItemId = R.id.menu_home
                     }
                     1 -> {
-                        bottomNavigationView.selectedItemId = R.id.menu_notification
+                        binding.bottomNavigation.selectedItemId = R.id.menu_notification
                     }
                     2 -> {
-                        bottomNavigationView.selectedItemId = R.id.menu_setting
+                        binding.bottomNavigation.selectedItemId = R.id.menu_setting
                     }
 
                 }
@@ -65,36 +66,35 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.setOnItemSelectedListener { item ->
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> {
                     findViewById<View>(R.id.home_bar).visibility = View.VISIBLE
                     findViewById<View?>(R.id.notification_bar).visibility  =  View.INVISIBLE
                     findViewById<View?>(R.id.setting_bar).visibility = View.INVISIBLE
-                    pagerMain.setCurrentItem(0)
+                    binding.pagerMain.setCurrentItem(0)
                     true
                 }
                 R.id.menu_notification -> {
                     findViewById<View>(R.id.home_bar).visibility = View.INVISIBLE
                     findViewById<View?>(R.id.notification_bar).visibility  =   View.VISIBLE
                     findViewById<View?>(R.id.setting_bar).visibility = View.INVISIBLE
-                    pagerMain.setCurrentItem(1)
+                    binding.pagerMain.setCurrentItem(1)
                     true
                 }
                 R.id.menu_setting -> {
                     findViewById<View>(R.id.home_bar).visibility = View.INVISIBLE
                     findViewById<View?>(R.id.notification_bar).visibility  =  View.INVISIBLE
                     findViewById<View?>(R.id.setting_bar).visibility = View.VISIBLE
-                    pagerMain.setCurrentItem(2)
+                    binding.pagerMain.setCurrentItem(2)
                     true
                 }
                 else -> false
             }
         }
-        val notificationItem = bottomNavigationView.menu.findItem(R.id.menu_notification)
+        val notificationItem = binding.bottomNavigation.menu.findItem(R.id.menu_notification)
 
-        notificationBadge = bottomNavigationView.getOrCreateBadge(notificationItem.itemId)
+        notificationBadge = binding.bottomNavigation.getOrCreateBadge(notificationItem.itemId)
         notificationBadge.isVisible = true
         notificationBadge.backgroundColor = ContextCompat.getColor(this, R.color.blue2)
     }
