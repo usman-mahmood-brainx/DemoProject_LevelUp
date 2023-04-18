@@ -21,7 +21,11 @@ class HomeFragment(private val context: Context) : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        val sharedPreferences = context.getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+        val name = sharedPreferences.getString("name",null)
+
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding.tvName.text = name
         // Inflate the layout for this fragment
 
         val dashboardList = listOf<DashboardItem>(
