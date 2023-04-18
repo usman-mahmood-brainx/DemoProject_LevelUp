@@ -14,8 +14,8 @@ import androidx.lifecycle.lifecycleScope
 import com.example.demoproject_levelup.LoginActivity
 import com.example.demoproject_levelup.Models.SettingItem
 import com.example.demoproject_levelup.R
-import com.example.demoproject_levelup.RetrofitInstance
-import com.example.demoproject_levelup.UserService
+import com.example.demoproject_levelup.APIs.RetrofitInstance
+import com.example.demoproject_levelup.APIs.UserService
 import com.example.demoproject_levelup.databinding.FragmentSettingBinding
 import com.example.demoproject_levelup.databinding.SettingCardItemBinding
 import kotlinx.coroutines.launch
@@ -81,7 +81,7 @@ class SettingFragment(private val context:Context) : Fragment() {
 
         lifecycleScope.launch {
             try {
-                Toast.makeText(context, "$accessToken + $client + $uid", Toast.LENGTH_LONG).show()
+               
                 val response: Response<ResponseBody> = retrofitInstance.userLogout(accessToken,uid,client)
                 if (response.isSuccessful()) {
                     val statusCode = response.code()

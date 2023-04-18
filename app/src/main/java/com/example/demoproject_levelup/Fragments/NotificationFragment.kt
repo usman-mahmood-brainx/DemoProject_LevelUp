@@ -10,12 +10,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.demoproject_levelup.*
+import com.example.demoproject_levelup.APIs.RetrofitInstance
+import com.example.demoproject_levelup.APIs.UserService
 import com.example.demoproject_levelup.Adapters.CustomAdapter
+import com.example.demoproject_levelup.Models.Data
 import com.example.demoproject_levelup.Models.Notification
 import com.example.demoproject_levelup.databinding.FragmentNotificationBinding
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 import retrofit2.Response

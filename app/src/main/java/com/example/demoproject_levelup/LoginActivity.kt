@@ -7,9 +7,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import com.example.demoproject_levelup.APIs.RetrofitInstance
+import com.example.demoproject_levelup.APIs.UserService
+import com.example.demoproject_levelup.Models.LoginRequest
+import com.example.demoproject_levelup.Models.LoginResponse
 import com.example.demoproject_levelup.databinding.ActivityLoginBinding
 import kotlinx.coroutines.launch
-import okhttp3.ResponseBody
 import org.json.JSONObject
 
 import retrofit2.Response
